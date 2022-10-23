@@ -21,3 +21,4 @@ with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as UDP_server_socket:
         f.close()
 
         print("img sent")
+
