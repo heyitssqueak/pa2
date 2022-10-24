@@ -14,9 +14,8 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server_socket:
     # Checking for connections
     while True:
         connection, address = server_socket.accept()
-        #print("-----BEGIN-----")
 
-        # Sending png file
+        # Sending file
         start_time = time.time()
         f = open("img.jpg", "rb")
         l = f.read(1024)
@@ -25,8 +24,6 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server_socket:
             l = f.read(1024)
         f.close()
 
-        #print(time.time()-start_time)
         connection.close()
-        #print("-----END-----")
         print("img sent")
 

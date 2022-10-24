@@ -10,7 +10,6 @@ try:
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     client_socket.connect((HOST,PORT))
     print("connected to port %s:%s" % (HOST,PORT))
-    #print("-----BEGIN-----")
 except socket.error as e:
     print("could not connect: ", e)
     exit()
@@ -32,5 +31,4 @@ while l:
 
 f.close()
 client_socket.close()
-#print("-----END-----")
 print("img sent")
